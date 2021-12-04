@@ -1,0 +1,38 @@
+{
+	"name": "wp-graphql-gravatar",
+	"version": "0.1.0",
+	"description": "Add a WP GraphQL field containing the Gravatar url of the comment author.",
+	"author": "Armand Philippot",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://github.com/ArmandPhilippot/wp-graphql-gravatar#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ArmandPhilippot/wp-graphql-gravatar.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ArmandPhilippot/wp-graphql-gravatar/issues"
+	},
+	"keywords": [
+		"WordPress",
+		"GraphQL",
+		"Gravatar",
+		"plugin"
+	],
+	"scripts": {
+		"release": "standard-version -a -s",
+		"zip": "node ./tools/zip.js"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^15.0.0",
+		"@commitlint/config-conventional": "^15.0.0",
+		"@wordpress/browserslist-config": "^4.1.0",
+		"@wordpress/prettier-config": "^1.1.0",
+		"archiver": "^5.3.0",
+		"browserslist": "^4.16.8",
+		"husky": "^7.0.2",
+		"lint-staged": "^11.1.2",
+		"prettier": "npm:wp-prettier@^2.2.1-beta-1",
+		"replace-in-file": "^6.2.0",
+		"standard-version": "^9.3.1"
+	}
+}
