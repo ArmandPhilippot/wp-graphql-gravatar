@@ -20,7 +20,7 @@
  * Author URI:        https://www.armandphilippot.com
  * Text Domain:       wpg-gravatar
  * Domain Path:       /languages
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.2
  * Requires PHP:      7.3
  */
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /*
  * Currently plugin version.
  */
-define( 'WP_GRAPHQL_GRAVATAR_VERSION', '1.0.0' );
+define( 'WP_GRAPHQL_GRAVATAR_VERSION', '1.0.1' );
 
 /**
  * Initialize the plugin.
