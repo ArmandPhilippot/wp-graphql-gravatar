@@ -1,6 +1,6 @@
 {
 	"name": "wp-graphql-gravatar",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Add a WP GraphQL field containing the Gravatar url of the comment author.",
 	"author": "Armand Philippot",
 	"license": "GPL-2.0-or-later",
