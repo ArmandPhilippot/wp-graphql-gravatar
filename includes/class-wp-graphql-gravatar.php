@@ -109,7 +109,7 @@ class WP_GraphQL_Gravatar {
 	}
 
 	/**
-	 * Register a new gravatarUrl field.
+	 * Register a new gravatarUrl field for Commenter Type.
 	 *
 	 * @since 0.1.0
 	 */
@@ -123,7 +123,7 @@ class WP_GraphQL_Gravatar {
 			array(
 				'type'        => $type,
 				'description' => $description,
-				'resolve'     => function( \WPGraphQL\Model\CommentAuthor $comment_author, $args ) {
+				'resolve'     => function( $comment_author ) {
 					// phpcs:ignore WordPress.NamingConventions.ValidVariableName
 					$author_email = get_comment_author_email( $comment_author->databaseId );
 					$args    = array(
