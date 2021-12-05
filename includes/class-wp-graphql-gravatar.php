@@ -125,13 +125,21 @@ class WP_GraphQL_Gravatar {
 				'description' => $description,
 				'resolve'     => function( $comment_author ) {
 					// phpcs:ignore WordPress.NamingConventions.ValidVariableName
-					$author_email = get_comment_author_email( $comment_author->databaseId );
+					$current_logged_user = get_user_by( 'id', $comment_author->databaseId );
+					$gravatar_url = '';
 					$args    = array(
 						'size'    => '60',
 						'default' => 'mystery',
 						'rating'  => 'g',
 					);
-					$gravatar_url = get_avatar_url( $author_email, $args );
+
+					if ( $current_logged_user ) {
+						$gravatar_url = get_avatar_url( $current_logged_user, $args );
+					} else {
+						// phpcs:ignore WordPress.NamingConventions.ValidVariableName
+						$author_email = get_comment_author_email( $comment_author->databaseId );
+						$gravatar_url = get_avatar_url( $author_email, $args );
+					}
 
 					return $gravatar_url;
 				},
