@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP GraphQL Gravatar
  * Plugin URI:        https://github.com/ArmandPhilippot/wp-graphql-gravatar#readme
- * Description:       Adds a WP GraphQL field containing the Gravatar url of the comment author.
+ * Description:       This plugin adds a WP GraphQL field containing the Gravatar url of the comment author.
  * Author:            Armand Philippot
  * Author URI:        https://www.armandphilippot.com
  * Text Domain:       wpg-gravatar

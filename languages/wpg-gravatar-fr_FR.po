@@ -1,0 +1,43 @@
+# Copyright (C) 2021 WP GraphQL Gravatar
+# This file is distributed under the same license as the WP GraphQL Gravatar package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP GraphQL Gravatar\n"
+"Report-Msgid-Bugs-To: https://github.com/ArmandPhilippot/wp-graphql-gravatar/"
+"issues\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Armand Philippot <contact@armandphilippot.com>\n"
+"Language-Team: Armand Philippot <contact@armandphilippot.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: ../includes/class-wp-graphql-gravatar.php:53
+msgid ""
+"This plugin adds a WP GraphQL field containing the Gravatar url of the "
+"comment author."
+msgstr ""
+"Ce plugin ajoute un champ WP GraphQL contenant l'URL du Gravatar de l'auteur "
+"d'un commentaire."
+
+#: ../includes/class-wp-graphql-gravatar.php:73
+msgid ""
+"You must install and activate WPGraphQL before running WP GraphQL Gravatar."
+msgstr ""
+"Vous devez installer et activer WPGraphQL avant d'exécuter WP GraphQL "
+"Gravatar."
+
+#: ../includes/class-wp-graphql-gravatar.php:118
+msgid "The author gravatar url."
+msgstr "L'url du Gravatar de l'auteur."
