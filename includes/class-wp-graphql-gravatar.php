@@ -65,24 +65,17 @@ class WP_GraphQL_Gravatar {
 	 */
 	public function check_plugin_dependencies() {
 		if ( ! class_exists( '\WPGraphQL' ) ) {
-			add_action(
-				'admin_notices',
-				function() {
-					?>
-					<div class="error notice">
-						<p>
-							<?php
-								esc_html__(
-									'You must install and activate WPGraphQL before running WP GraphQL Gravatar.',
-									'wpg-gravatar'
-								);
-							?>
-						</p>
-					</div>
-					<?php
-				}
-			);
+			add_action( 'admin_notices', array( $this, 'print_plugin_activation_error' ) );
 		}
+	}
+
+	/**
+	 * Print the error notice during activation.
+	 *
+	 * @since 1.1.0
+	 */
+	public function print_plugin_activation_error() {
+		include_once 'partials/activation/wp-graphql-gravatar-error.php';
 	}
 
 	/**
