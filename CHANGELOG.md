@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/ArmandPhilippot/wp-graphql-gravatar/compare/v1.1.0...v1.1.1) (2021-12-06)
+
+### Bug Fixes
+
+-   make the success notice temporary ([ab7625d](https://github.com/ArmandPhilippot/wp-graphql-gravatar/commit/ab7625de32b8d1897b283270ed36104ea9666e33))
+
 ## [1.1.0](https://github.com/ArmandPhilippot/wp-graphql-gravatar/compare/v1.0.1...v1.1.0) (2021-12-06)
 
 ### Features
