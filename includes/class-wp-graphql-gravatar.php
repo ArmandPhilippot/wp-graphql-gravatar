@@ -46,6 +46,7 @@ class WP_GraphQL_Gravatar {
 	 * Define the plugin functionality.
 	 *
 	 * @since 0.1.0
+	 * @since 1.1.0 Load admin hooks.
 	 */
 	public function __construct() {
 		$this->plugin_version     = defined( WP_GRAPHQL_GRAVATAR_VERSION ) ? WP_GRAPHQL_GRAVATAR_VERSION : '1.0.0';
@@ -54,6 +55,7 @@ class WP_GraphQL_Gravatar {
 
 		$this->load_dependencies();
 		$this->set_locale();
+		$this->define_admin_hooks();
 	}
 
 	/**
@@ -87,6 +89,7 @@ class WP_GraphQL_Gravatar {
 	 * Loads the required dependencies for this plugin.
 	 *
 	 * @since  0.1.0
+	 * @since  1.1.0 Require wp-graphql-gravatar-admin.
 	 *
 	 * @access private
 	 */
@@ -96,6 +99,11 @@ class WP_GraphQL_Gravatar {
 		 * functionality of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-graphql-gravatar-i18n.php';
+
+		/**
+		 * The class responsible for defining all actions that occur in the admin area.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-graphql-gravatar-admin.php';
 	}
 
 	/**
@@ -106,6 +114,18 @@ class WP_GraphQL_Gravatar {
 	private function set_locale() {
 		$translation = new WP_GraphQL_Gravatar_I18n();
 		$translation->init();
+	}
+
+		/**
+		 * Register all of the hooks related to the admin area functionality of the plugin.
+		 *
+		 * @since 1.1.0
+		 */
+	private function define_admin_hooks() {
+		$plugin_admin = new WP_GraphQL_Gravatar_Admin( $this->get_plugin_name(), $this->get_plugin_description(), $this->get_plugin_version() );
+
+		add_action( 'admin_init', array( $plugin_admin, 'init_settings_sections_fields' ) );
+		add_action( 'admin_menu', array( $plugin_admin, 'add_settings_menu' ), 11 );
 	}
 
 	/**
@@ -128,7 +148,6 @@ class WP_GraphQL_Gravatar {
 					$current_logged_user = get_user_by( 'id', $comment_author->databaseId );
 					$gravatar_url = '';
 					$args    = array(
-						'size'    => '60',
 						'default' => 'mystery',
 						'rating'  => 'g',
 					);
