@@ -38,6 +38,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'WP_GRAPHQL_GRAVATAR_VERSION', '1.1.0' );
 
 /**
+ * The code that runs during plugin activation.
+ */
+function activate_wp_graphql_gravatar() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-graphql-gravatar.php';
+	WP_GraphQL_Gravatar::activate();
+}
+
+register_activation_hook( __FILE__, 'WP_GraphQL_Gravatar\activate_wp_graphql_gravatar' );
+
+/**
  * Initialize the plugin.
  *
  * @since 0.1.0

@@ -77,7 +77,11 @@ class WP_GraphQL_Gravatar {
 	 * @since 1.1.0
 	 */
 	public function print_plugin_activation_success() {
-		include_once 'partials/activation/wp-graphql-gravatar-success.php';
+		if ( get_transient( 'wp-graphql-gravatar-admin-notice' ) ) {
+			include_once 'partials/activation/wp-graphql-gravatar-success.php';
+
+			delete_transient( 'wp-graphql-gravatar-admin-notice' );
+		}
 	}
 
 	/**
@@ -173,6 +177,15 @@ class WP_GraphQL_Gravatar {
 				},
 			)
 		);
+	}
+
+	/**
+	 * Set a transient to display a temporary notice on activation.
+	 *
+	 * This function is fired during plugin activation.
+	 */
+	public static function activate() {
+		set_transient( 'wp-graphql-gravatar-admin-notice', true, 5 );
 	}
 
 	/**
