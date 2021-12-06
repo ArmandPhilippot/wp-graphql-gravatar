@@ -144,12 +144,17 @@ class WP_GraphQL_Gravatar {
 				'type'        => $type,
 				'description' => $description,
 				'resolve'     => function( $comment_author ) {
+					$default_avatar = get_option( 'wp_graphql_gravatar_default' );
+					$allowed_rating = get_option( 'wp_graphql_gravatar_rating' );
+					$avatar_size = get_option( 'wp_graphql_gravatar_size' );
+
 					// phpcs:ignore WordPress.NamingConventions.ValidVariableName
 					$current_logged_user = get_user_by( 'id', $comment_author->databaseId );
 					$gravatar_url = '';
 					$args    = array(
-						'default' => 'mystery',
-						'rating'  => 'g',
+						'default' => $default_avatar,
+						'rating'  => $allowed_rating,
+						'size'    => $avatar_size,
 					);
 
 					if ( $current_logged_user ) {
