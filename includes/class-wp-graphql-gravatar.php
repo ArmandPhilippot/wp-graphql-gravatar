@@ -66,7 +66,18 @@ class WP_GraphQL_Gravatar {
 	public function check_plugin_dependencies() {
 		if ( ! class_exists( '\WPGraphQL' ) ) {
 			add_action( 'admin_notices', array( $this, 'print_plugin_activation_error' ) );
+		} else {
+			add_action( 'admin_notices', array( $this, 'print_plugin_activation_success' ) );
 		}
+	}
+
+	/**
+	 * Print the success notice after activation.
+	 *
+	 * @since 1.1.0
+	 */
+	public function print_plugin_activation_success() {
+		include_once 'partials/activation/wp-graphql-gravatar-success.php';
 	}
 
 	/**
