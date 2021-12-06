@@ -16,14 +16,47 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../includes/class-wp-graphql-gravatar.php:53
+#: ../includes/class-wp-graphql-gravatar-admin.php:84
+msgid "Gravatar options"
+msgstr ""
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:91
+msgid "Avatar size"
+msgstr ""
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:110
+msgid "Avatar rating"
+msgstr ""
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:126
+msgid "Default avatar"
+msgstr ""
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:147, ../includes/partials/admin/wp-graphql-gravatar-display.php:14
+msgid "WP GraphQL Gravatar Settings"
+msgstr ""
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:148
+msgid "WP GraphQL Gravatar"
+msgstr ""
+
+#. translators: The gravatar url.
+#: ../includes/class-wp-graphql-gravatar-admin.php:173
+msgid "You can find more information about the different options on Gravatar website: %s"
+msgstr ""
+
+#: ../includes/class-wp-graphql-gravatar.php:54
 msgid "This plugin adds a WP GraphQL field containing the Gravatar url of the comment author."
 msgstr ""
 
-#: ../includes/class-wp-graphql-gravatar.php:73
-msgid "You must install and activate WPGraphQL before running WP GraphQL Gravatar."
+#: ../includes/class-wp-graphql-gravatar.php:142
+msgid "The author gravatar url."
 msgstr ""
 
-#: ../includes/class-wp-graphql-gravatar.php:118
-msgid "The author gravatar url."
+#: ../includes/partials/activation/wp-graphql-gravatar-error.php:14
+msgid "WPGraphQL plugin need to be installed and activated in order for WP GraphQL Gravatar to work."
+msgstr ""
+
+#: ../includes/partials/activation/wp-graphql-gravatar-success.php:14
+msgid "WP GraphQL Gravatar is now activated! You can configure it under Settings menu."
 msgstr ""

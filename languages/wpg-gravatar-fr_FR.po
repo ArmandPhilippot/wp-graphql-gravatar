@@ -23,7 +23,41 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: ../includes/class-wp-graphql-gravatar.php:53
+#: ../includes/class-wp-graphql-gravatar-admin.php:84
+msgid "Gravatar options"
+msgstr "Options de Gravatar"
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:91
+msgid "Avatar size"
+msgstr "Taille de l'avatar"
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:110
+msgid "Avatar rating"
+msgstr "Classement de l'avatar"
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:126
+msgid "Default avatar"
+msgstr "Avatar par défaut"
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:147,
+#: ../includes/partials/admin/wp-graphql-gravatar-display.php:14
+msgid "WP GraphQL Gravatar Settings"
+msgstr "Réglages de WP GraphQL Gravatar"
+
+#: ../includes/class-wp-graphql-gravatar-admin.php:148
+msgid "WP GraphQL Gravatar"
+msgstr "WP GraphQL Gravatar"
+
+#. translators: The gravatar url.
+#: ../includes/class-wp-graphql-gravatar-admin.php:173
+msgid ""
+"You can find more information about the different options on Gravatar "
+"website: %s"
+msgstr ""
+"Vous pouvez trouver plus d'informations à propos des différentes options sur "
+"le site de Gravatar : %s"
+
+#: ../includes/class-wp-graphql-gravatar.php:54
 msgid ""
 "This plugin adds a WP GraphQL field containing the Gravatar url of the "
 "comment author."
@@ -31,13 +65,22 @@ msgstr ""
 "Ce plugin ajoute un champ WP GraphQL contenant l'URL du Gravatar de l'auteur "
 "d'un commentaire."
 
-#: ../includes/class-wp-graphql-gravatar.php:73
-msgid ""
-"You must install and activate WPGraphQL before running WP GraphQL Gravatar."
-msgstr ""
-"Vous devez installer et activer WPGraphQL avant d'exécuter WP GraphQL "
-"Gravatar."
-
-#: ../includes/class-wp-graphql-gravatar.php:118
+#: ../includes/class-wp-graphql-gravatar.php:142
 msgid "The author gravatar url."
 msgstr "L'url du Gravatar de l'auteur."
+
+#: ../includes/partials/activation/wp-graphql-gravatar-error.php:14
+msgid ""
+"WPGraphQL plugin need to be installed and activated in order for WP GraphQL "
+"Gravatar to work."
+msgstr ""
+"Le plugin WPGraphQL doit être installé et activé pour que WP GraphQL "
+"Gravatar fonctionne."
+
+#: ../includes/partials/activation/wp-graphql-gravatar-success.php:14
+msgid ""
+"WP GraphQL Gravatar is now activated! You can configure it under Settings "
+"menu."
+msgstr ""
+"WP GraphQL Gravatar est maintenant activé ! Vous pouvez le configurer dans "
+"le menu Réglages."
